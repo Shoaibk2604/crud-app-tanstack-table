@@ -12,16 +12,19 @@ import PostForm from "./PostForm";
 import PostsTable from "./PostsTable";
 
 export default function PostsPage() {
+  // API calls
   const postsQuery = usePosts();
   const createMutation = useCreatePost();
   const updateMutation = useUpdatePost();
   const deleteMutation = useDeletePost();
 
+  // UI states
   const [createOpen, setCreateOpen] = useState(false);
   const [editPost, setEditPost] = useState(null);
   const [deletePost, setDeletePost] = useState(null);
   const [feedback, setFeedback] = useState(null);
 
+  // Table columns
   const columns = useMemo(
     () =>
       getPostsColumns({
@@ -83,15 +86,14 @@ export default function PostsPage() {
     }
   }
 
-  const isLoading = postsQuery.isLoading;
-  const isError = postsQuery.isError;
+  const isLoading = postsQuery?.isLoading;
+  const isError = postsQuery?.isError;
 
   return (
     <div className="page">
       <header className="pageHeader">
         <div>
-          <h1 className="title">Posts</h1>
-          <p className="subtitle">CRUD Operation</p>
+          <h1 className="title">CRUD Operation</h1>
         </div>
         <button className="btn btn-primary" onClick={() => setCreateOpen(true)}>
           Add Post

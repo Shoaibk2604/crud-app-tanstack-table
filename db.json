@@ -1,3 +1,22 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": "b261",
+      "title": "csdcsd",
+      "author": "csdcsd",
+      "body": "csdc"
+    },
+    {
+      "id": "4f07",
+      "title": "scdcsd",
+      "author": "csdc",
+      "body": "csdcd"
+    },
+    {
+      "id": "ce82",
+      "title": "csdcsd",
+      "author": "csdc",
+      "body": "cdsc"
+    }
+  ]
 }
